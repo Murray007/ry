@@ -33,6 +33,11 @@ module.exports = {
     host: '0.0.0.0',
     port: port,
     open: true,
+    hot: true,
+    watchOptions: {
+      poll: 1000,
+      ignored: /node_modules/
+    },
     proxy: {
       // detail: https://cli.vuejs.org/config/#devserver-proxy
       [process.env.VUE_APP_BASE_API]: {
